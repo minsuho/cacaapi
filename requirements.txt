@@ -7,4 +7,3 @@ Werkzeug==1.0.1
 uwsgi
 tinydb==4.5.0
 flask_cors
-random
