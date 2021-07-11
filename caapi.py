@@ -14,7 +14,7 @@ def api1():
     url = 'http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19InfStateJson'
 
     params = {
-        "serviceKey" : "N2TgJ8nBy9uNBRnlVVEkVsf8r1r1HUTqzufZKo+/xQcAcjEYEsCJJfCwvj85f1IkEJgD6Uk22ZTf19TijGS5MQ==",
+        "serviceKey" : "zD0l/q+zOqlqv7br6BYklo1jxWZqyzg3BO1lS/p7loirhUlVFFGXt299tnoRFi78ThzPQP4qTZOKPMTmQwst3A==",
         "pageNo" : "1",
         "numOfRows" : 10,
         "startCreateDt" : now_str,
@@ -37,7 +37,7 @@ def api1():
         url = 'http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19InfStateJson'
 
         params = {
-            "serviceKey" : "N2TgJ8nBy9uNBRnlVVEkVsf8r1r1HUTqzufZKo+/xQcAcjEYEsCJJfCwvj85f1IkEJgD6Uk22ZTf19TijGS5MQ==",
+            "serviceKey" : "zD0l/q+zOqlqv7br6BYklo1jxWZqyzg3BO1lS/p7loirhUlVFFGXt299tnoRFi78ThzPQP4qTZOKPMTmQwst3A==",
             "pageNo" : "1",
             "numOfRows" : 10,
             "startCreateDt" : now_str,
@@ -60,7 +60,7 @@ def api1():
     url = 'http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19InfStateJson'
 
     params = {
-        "serviceKey" : "N2TgJ8nBy9uNBRnlVVEkVsf8r1r1HUTqzufZKo+/xQcAcjEYEsCJJfCwvj85f1IkEJgD6Uk22ZTf19TijGS5MQ==",
+        "serviceKey" : "zD0l/q+zOqlqv7br6BYklo1jxWZqyzg3BO1lS/p7loirhUlVFFGXt299tnoRFi78ThzPQP4qTZOKPMTmQwst3A==",
         "pageNo" : "1",
         "numOfRows" : 10,
         "startCreateDt" : yday_str,
@@ -113,7 +113,7 @@ def api2():
     url = 'http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19SidoInfStateJson'
 
     params = {
-        "serviceKey" : "N2TgJ8nBy9uNBRnlVVEkVsf8r1r1HUTqzufZKo+/xQcAcjEYEsCJJfCwvj85f1IkEJgD6Uk22ZTf19TijGS5MQ==",
+        "serviceKey" : "zD0l/q+zOqlqv7br6BYklo1jxWZqyzg3BO1lS/p7loirhUlVFFGXt299tnoRFi78ThzPQP4qTZOKPMTmQwst3A==",
         "pageNo" : "1",
         "numOfRows" : 10,
         "startCreateDt" : now_str,
@@ -136,7 +136,7 @@ def api2():
         url = 'http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19SidoInfStateJson'
 
         params = {
-            "serviceKey" : "N2TgJ8nBy9uNBRnlVVEkVsf8r1r1HUTqzufZKo+/xQcAcjEYEsCJJfCwvj85f1IkEJgD6Uk22ZTf19TijGS5MQ==",
+            "serviceKey" : "zD0l/q+zOqlqv7br6BYklo1jxWZqyzg3BO1lS/p7loirhUlVFFGXt299tnoRFi78ThzPQP4qTZOKPMTmQwst3A==",
             "pageNo" : "1",
             "numOfRows" : 10,
             "startCreateDt" : now_str,
@@ -159,7 +159,7 @@ def api2():
     url = 'http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19SidoInfStateJson'
 
     params = {
-        "serviceKey" : "N2TgJ8nBy9uNBRnlVVEkVsf8r1r1HUTqzufZKo+/xQcAcjEYEsCJJfCwvj85f1IkEJgD6Uk22ZTf19TijGS5MQ==",
+        "serviceKey" : "zD0l/q+zOqlqv7br6BYklo1jxWZqyzg3BO1lS/p7loirhUlVFFGXt299tnoRFi78ThzPQP4qTZOKPMTmQwst3A==",
         "pageNo" : "1",
         "numOfRows" : 10,
         "startCreateDt" : yday_str,
@@ -212,4 +212,4 @@ if __name__ == '__main__':
         api2()
         api1()
         print(1)
-        time.sleep(randint(600,610))
+        time.sleep(1800)
