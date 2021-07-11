@@ -28,7 +28,8 @@ def api1():
     data1 = json.loads(jo)
     if data1['response']['body']['totalCount'] == "0":
         data = False
-    data = data1['response']['body']['items']['item']
+    else:
+        data = data1['response']['body']['items']['item']
 
     if not data:
         yday = now - timedelta(days=1)
@@ -40,8 +41,8 @@ def api1():
             "serviceKey" : "zD0l/q+zOqlqv7br6BYklo1jxWZqyzg3BO1lS/p7loirhUlVFFGXt299tnoRFi78ThzPQP4qTZOKPMTmQwst3A==",
             "pageNo" : "1",
             "numOfRows" : 10,
-            "startCreateDt" : now_str,
-            "endCreateDt" : now_str
+            "startCreateDt" : yday_str,
+            "endCreateDt" : yday_str
         }
 
         res = requests.get(url, params=params)
@@ -51,7 +52,8 @@ def api1():
         data1 = json.loads(jo)
         if data1['response']['body']['totalCount'] == "0":
             data = False
-        data = data1['response']['body']['items']['item']
+        else:
+            data = data1['response']['body']['items']['item']
 
     # 어제 코로나 데이터 가져오기
     yday = now - timedelta(days=1)
@@ -74,7 +76,8 @@ def api1():
     data1 = json.loads(jo)
     if data1['response']['body']['totalCount'] == "0":
         data2 = False
-    data2 = data1['response']['body']['items']['item']
+    else:
+        data2 = data1['response']['body']['items']['item']
 
     #어제,오늘 데이터 가공
     ndayca1 = {
@@ -105,6 +108,8 @@ def api1():
     with open(file_path, 'w') as outfile:
         json.dump(ndayca, outfile, indent=4)
 
+    return ndayca
+
 def api2():
     # 오늘 코로나 데이터 가져오기
     now = date.today()
@@ -127,7 +132,8 @@ def api2():
     data1 = json.loads(jo)
     if data1['response']['body']['totalCount'] == "0":
         data = False
-    data = data1['response']['body']['items']['item']
+    else:
+        data = data1['response']['body']['items']['item']
 
     if not data:
         yday = now - timedelta(days=1)
@@ -139,8 +145,8 @@ def api2():
             "serviceKey" : "zD0l/q+zOqlqv7br6BYklo1jxWZqyzg3BO1lS/p7loirhUlVFFGXt299tnoRFi78ThzPQP4qTZOKPMTmQwst3A==",
             "pageNo" : "1",
             "numOfRows" : 10,
-            "startCreateDt" : now_str,
-            "endCreateDt" : now_str
+            "startCreateDt" : yday_str,
+            "endCreateDt" : yday_str
         }
 
         res = requests.get(url, params=params)
@@ -150,7 +156,8 @@ def api2():
         data1 = json.loads(jo)
         if data1['response']['body']['totalCount'] == "0":
             data = False
-        data = data1['response']['body']['items']['item']
+        else:
+            data = data1['response']['body']['items']['item']
 
     # 어제 코로나 데이터 가져오기
     yday = now - timedelta(days=1)
@@ -173,7 +180,8 @@ def api2():
     data1 = json.loads(jo)
     if data1['response']['body']['totalCount'] == "0":
         data2 = False
-    data2 = data1['response']['body']['items']['item']
+    else:
+        data2 = data1['response']['body']['items']['item']
 
     #어제,오늘 데이터 가공
     ndayca = []
@@ -213,3 +221,5 @@ if __name__ == '__main__':
         api1()
         print(1)
         time.sleep(1800)
+    # print(api1())
+    # print(api2())
