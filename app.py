@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS
 import json
-import cacaapi
+import caapi
 
 
 app = Flask(__name__)
@@ -9,8 +9,8 @@ CORS(app)
 
 @app.route('/')
 def api():
-    cacaapi.api1()
-    cacaapi.api2()
+    caapi.api1()
+    caapi.api2()
     print('ok')
     return'hi'
 
