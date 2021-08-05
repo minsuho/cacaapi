@@ -1,9 +1,12 @@
 from flask import Flask, render_template, request, jsonify
+from flask_cors import CORS
 import json
 import caapi
 
 
 app = Flask(__name__)
+CORS(app)
+app.config['JSON_AS_ASCII'] = False
 
 @app.route('/')
 def api():
